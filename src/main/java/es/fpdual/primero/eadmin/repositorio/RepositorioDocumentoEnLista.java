@@ -32,15 +32,11 @@ public class RepositorioDocumentoEnLista implements RepositorioDocumento {
 
 	@Override
 	public void eliminarDocumento(int codigoDocumento) {
-		//Solucion 1
+		// Solucion 1
 		Documento documentoAEliminar = new Documento(codigoDocumento, null, null, null, null);
-		
-		//Solucion 2
-		documentoAEliminar = documentos.stream().filter(d -> d.getId().intValue == codigoDocumento);
 		final int indice = documentos.indexOf(documentoAEliminar);
 		documentos.remove(indice);
 	}
-	
 
 	@Override
 	public List<Documento> obtenerTodosDocumentos() {
