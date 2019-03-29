@@ -7,7 +7,7 @@ import es.fpdual.primero.eadmin.modelo.Documento;
 public interface RepositorioDocumento {
 	void  altaDocumento(Documento documento);
 	void modificarDocumento(Documento documento);
-	void eliminarDocumento(int codigoDocumento);
+	void eliminarDocumento(int id);
 	List<Documento> obtenerTodosDocumentos();
 	int siguienteId();
 }

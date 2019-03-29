@@ -39,15 +39,8 @@ public class ServicioDocmentoImplTest {
 
 	@Test
 	public void deberiaModificarDocumento() {
-		final Documento documento = mock(Documento.class);
-		final Documento documentoModificado = mock(Documento.class);
-
-		when(repositorioDocumento.modificarDocumento(documento)).thenReturn(documentoModificado);
-
-		final Documento resultado = servicioDocumento.modificarDocumento(documento);
-
-		assertEquals(documentoModificado, resultado);
-
+		servicioDocumento.modificarDocumento(documento);
+		verify(this.repositorioDocumento).modificarDocumento(documento);
 	}
 	
 	@Test 
